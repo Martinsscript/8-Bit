@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('imgs/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  transition: transform 1s ease; /* usado no efeito portal */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e60012;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.menu a:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  margin: 50px auto;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #000;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.portal {
+  transform: rotate(360deg) scale(0);
+}
+
+#insert-coin {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #ffcc00;
+  opacity: 0;
+  pointer-events: none;
+  animation: blink 1s infinite;
+  transition: opacity 0.5s;
+}
+
+#insert-coin.show {
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}

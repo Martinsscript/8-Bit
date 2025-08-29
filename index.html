@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8-Bit</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="imgs/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="timeline.html" id="timelineLink">Timeline</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
+  <main class="grid-layout">
+    <div class="container" id="inicio">
+      <h1 id="titulo">Bem-vindo ao 8-Bit!</h1>
+      <p>Explore o vasto mundo dos games desde que ele chegou ás nossas telas.</p>
+    </div>
+
+    <div class="container" id="sobre">
+      <h2>Sobre</h2>
+      <p>Faremos uma grande jornada visitando cada ponto da história dos jogos.</p>
+    </div>
+
+    <div class="container" id="contato">
+      <h2>Contato</h2>
+      <p>Esse site foi feito como projeto para curso técnico. :)</p>
+    </div>
+    <div class="container" id="créditos">
+      <h2>Créditos</h2>
+      <p>Feito por Rafael Martins, Arthur Malheiros e Victor Oliveira</p>
+    </div>
+  </main>
+
+  <div id="insert-coin">INSERT COIN TO CONTINUE</div>
+
+  <script>
+    const titulo = document.getElementById("titulo");
+    const audio = new Audio("sounds/coin.mp3");
+
+    titulo.addEventListener("dblclick", () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+
+    const timelineLink = document.getElementById("timelineLink");
+    timelineLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.add("portal");
+      setTimeout(() => {
+        window.location.href = timelineLink.href;
+      }, 1000);
+    });
+
+    const insertCoin = document.getElementById("insert-coin");
+    window.addEventListener("scroll", () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        insertCoin.classList.add("show");
+      }
+    });
+  </script>
+</body>
+</html>
