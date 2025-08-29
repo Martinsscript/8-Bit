@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    background-image: url('imgs/retro-gaming.jpg');
+    background-image: url('/imgs/retro-gaming.jpg');
     background-repeat: no-repeat;
     background-position: center ;
     background-size: cover;
