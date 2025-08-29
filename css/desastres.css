@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-image: url('imgs/desastres.jpg');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: #000000;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.topics {
+    background-color: rgb(255, 2, 2);
+}
+header {
+    
+    box-shadow: 2px 10px 10px rgb(130, 20, 20);
+    padding-top: 1em;
+    text-align: center;
+    
+  }
+
+header h1{
+  font-size: 3em;
+  font-family: 'Press Start 2P', cursive;
+  color: #A80000;
+  text-shadow: 1px 1px 2px #000;
+  padding: 20px;
+  margin: 0;
+  
+  
+}
+  img{
+    padding-left: 500px;
+  }
+
+  .timeline{
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 0;
+  }
+
+  .container{
+    padding: 0px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 55%;
+    box-sizing: border-box;
+  }
+
+  .container.left{
+    left: -8%;
+  } 
+
+  .container.right{
+    left: 53%;
+  }
+
+  .content{
+    background-color: rgba(118, 15, 15, 0.85);
+    padding: 20px 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .container:hover .content{
+    transform: scale(1.03);
+  }
+
+ 
+  .container.left::before{
+    right: -8px;
+  }
+
+  .container.right::before{
+    left: -8px;
+  }
+
+  .left{
+    left: 0;
+  }
+
+  .right{
+    left: 50%;
+  }
+
+  .mini-img{
+    width: 50px;
+    float: right;
+    margin: 10px;
+  }
+
+  .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #e60012;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  
+  .menu a:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transform: scale(1.1);
+  }
